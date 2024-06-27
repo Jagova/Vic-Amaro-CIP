@@ -13,7 +13,7 @@
         <div class="row justify-content-center">
             <div class="col-md-3 mb-4 service-card" *ngFor="let service of principalServices"
                 (click)="navigateToService(service.path)">
-                <div class="card text-white">
+                <div class="card">
                     <img [src]="service.image" class="card-img" [alt]="service.title">
                     <div class="card-img-overlay d-flex align-items-center justify-content-center">
                         <h5 class="card-title text-uppercase subtitle-font text-center">{{ service.title }}</h5>

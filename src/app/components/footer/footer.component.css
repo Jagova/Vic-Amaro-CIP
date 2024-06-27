@@ -1,0 +1,44 @@
+footer {
+    background-color: #343a40;
+    color: #F2EBE6;
+}
+
+.subtitle-font {
+    font-size: 1.5rem;
+}
+
+footer .social-icons a {
+    color: F2EBE6;
+    margin-right: 10px;
+}
+
+footer .social-icons a:hover {
+    color: #F2EBE6;
+}
+
+footer p,
+footer h2 {
+    margin: 0;
+    padding: 5px 0;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .col-md-4 {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+}

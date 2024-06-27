@@ -1,0 +1,39 @@
+nav {
+    background-color: transparent !important;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    width: 75px;
+    height: 75px;
+    margin-left: 20px;
+    opacity: 1 !important;
+}
+
+nav .nav-link {
+    margin: 0 15px;
+    font-size: 22px;
+    color: #9A9A9A;
+    opacity: 1 !important;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+nav .nav-link:hover {
+    color: #F2EBE6;
+}
+
+.nav-link.active {
+    color: #F2EBE6 !important;
+}
+
+body {
+    padding-top: 75px;
+}
+
+button{
+    background-color: #F2EBE6 !important;
+}

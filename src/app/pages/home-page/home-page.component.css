@@ -26,6 +26,12 @@
     padding: 10px;
     border-radius: 5px;
     font-size: 32px;
+    color: #F2EBE6;
+    transition: color 0.3s linear;
+}
+
+.card:hover .card-title {
+    color: #BBC9D4;
 }
 
 .testimonial {
