@@ -1,0 +1,22 @@
+.cover-image {
+    width: 100%;
+    height: 80vh; /* Ajusta la altura según sea necesario */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+@media screen and (max-width: 768px) {
+    .cover-image {
+        height: 45vh;
+    }
+
+    section{
+        text-align: center;
+    }
+}

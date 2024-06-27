@@ -1,0 +1,36 @@
+<div class="container-fluid px-4" style="background-color: #0C2738;">
+    <article *ngIf="service" class="container py-5">
+        <header>
+            <h1 class="display-4 text-center mb-5 subtitle-font">{{ service.title }}</h1>
+        </header>
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <figure>
+                    <img [src]="service.image" class="img-fluid" [alt]="service.title">
+                </figure>
+            </div>
+            <div class="col-md-6">
+                <section>
+                    <div [innerHTML]="service.description"></div>
+                    <div class="mt-4" *ngIf="hasMultipleModalities()">
+                        <label for="priceSelect" class="form-label">Modalidad:</label>
+                        <select id="priceSelect" class="form-select" [(ngModel)]="selectedPrice"
+                            (change)="onPriceChange()">
+                            <option value="online" *ngIf="service.priceOnline && service.onlineDescription">Online
+                            </option>
+                            <option value="presencial" *ngIf="service.pricePresencial && service.presencialDescription">
+                                Presencial</option>
+                        </select>
+                    </div>
+                    <div class="mt-4" *ngIf="!hasMultipleModalities()">
+                        <p class="form-label">Modalidad: {{ selectedPrice === 'online' ? 'Online' : 'Presencial' }}</p>
+                    </div>
+                    <div class="mt-4">
+                        <h4>Precio: {{ getPrice() }}</h4>
+                    </div>
+                    <div class="mt-4" [innerHTML]="getDescription()"></div>
+                </section>
+            </div>
+        </div>
+    </article>
+</div>

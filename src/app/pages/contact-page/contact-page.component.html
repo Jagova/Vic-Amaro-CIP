@@ -1,0 +1,60 @@
+<div class="container-fluid p-0" style="background-color: #0C2738;">
+    <!-- Imagen de portada -->
+    <section class="cover-image" style="background-image: url('assets/images/contact.jpeg');">
+    </section>
+
+    <!-- Título de la página -->
+    <section class="text-center pt-5 ">
+        <h1 class="display-4 text-uppercase title-font">Contáctanos</h1>
+    </section>
+
+    <!-- Sección del mapa -->
+    <section class="container py-3">
+        <h2 class="subtitle-font">Ubicación</h2>
+        <div class="map-responsive">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.689507035003!2d-100.99345768457629!3d22.148236892291088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842aa03d9d29ad69%3A0x5a4d51cb6f2c1182!2sMariano%20%C3%81vila%20775%2C%20Tequisquiapan%2C%2078250%20San%20Luis%20Potos%C3%AD%2C%20S.L.P.%2C%20Mexico!5e0!3m2!1sen!2sus!4v1623887684223!5m2!1sen!2sus"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Sección de horario de atención y formulario en un mismo renglón -->
+    <section class="container py-5">
+        <div class="row">
+            <!-- Sección de horario de atención -->
+            <div class="col-md-6">
+                <h2 class="subtitle-font">Horario de atención</h2>
+                <p>Lunes: 09:00 am - 06:00 pm <br>
+                    Martes: 09:00 am - 06:00 pm <br>
+                    Miércoles: 09:00 am - 06:00 pm<br>
+                    Jueves: 09:00 am - 06:00 pm <br>
+                    Viernes: 09:00 am - 06:00 pm<br>
+                    Sábado: 4:00 pm - 08:00 pm<br>
+                    Domingo: Cerrado</p>
+            </div>
+
+            <!-- Sección del formulario de contacto -->
+            <div class="col-md-6">
+                <h2 class="subtitle-font">Formulario de contacto</h2>
+                <form (ngSubmit)="sendMail()">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" rows="3" [(ngModel)]="message" name="message"
+                            required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-custom">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Agrandir-Tight';
+    src: url('assets/fonts/Agrandir-Tight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fontspring-theseasons';
+    src: url('assets/fonts/Fontspring-theseasons-reg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'silka-medium';
+    src: url('assets/fonts/silka-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Uso de la fuente en tu CSS */
+body {
+    font-family: 'Agrandir-Tight', sans-serif !important;
+    color: #BBC9D4 !important;
+}
+
+.title-font {
+    font-family: 'Fontspring-theseasons', sans-serif;
+}
+
+.subtitle-font {
+    font-family: 'silka-medium', sans-serif;
+}
+
+button {
+    background-color: #BBC9D4 !important;
+    color: #FFFFFF !important;
+}
+
+button:hover {
+    background-color: #A1B3C2 !important;
+    color: #F0F0F0 !important;
+}
