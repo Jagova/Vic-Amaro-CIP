@@ -42,5 +42,6 @@ testem.log
 Thumbs.db
 
 .firebase*
-nginix.conf
+nginx.conf
 dockerfile
+package-lock.json

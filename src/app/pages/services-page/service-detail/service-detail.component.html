@@ -1,4 +1,4 @@
-<div class="container-fluid px-4" style="background-color: #0C2738;">
+<div class="container-fluid px-4 pt-5" style="background-color: #0C2738;">
     <article *ngIf="service" class="container py-5">
         <header>
             <h1 class="display-4 text-center mb-5 subtitle-font">{{ service.title }}</h1>
@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-6 text-center">
                 <figure>
-                    <img [src]="service.image" class="img-fluid" [alt]="service.title">
+                    <img [src]="service.image" class="img-fluid fixed-size" [alt]="service.title">
                 </figure>
             </div>
             <div class="col-md-6">
@@ -28,6 +28,14 @@
                     <div class="mt-4">
                         <h4>Precio: {{ getPrice() }}</h4>
                     </div>
+                </section>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <section>
+                    <h2 class="subtitle-font text-center">¿Cómo funciona la modalidad {{ selectedPrice === 'online' ?
+                        'online' : 'presencial' }}?</h2>
                     <div class="mt-4" [innerHTML]="getDescription()"></div>
                 </section>
             </div>

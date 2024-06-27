@@ -17,7 +17,7 @@ export class ServicesPageComponent {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.services = services;
+    this.services = services.sort((a, b) => a.priority - b.priority);
   }
 
   navigateToService(path: string): void {

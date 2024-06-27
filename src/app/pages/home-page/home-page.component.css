@@ -3,7 +3,7 @@
     height: 80vh;
     /* Ocupa el 80% de la altura de la pantalla */
     background-size: cover;
-    background-position: center;
+    background-position: 50% 30%;
 }
 
 .card {

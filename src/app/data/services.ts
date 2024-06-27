@@ -46,7 +46,8 @@ export const services: Service[] = [
         `,
         isPrincipal: true,
         priceOnline: '$6,188',
-        pricePresencial: '$6,749'
+        pricePresencial: '$6,749',
+        priority: 1,
     },
     {
         path: 'professional-image',
@@ -103,7 +104,8 @@ export const services: Service[] = [
         `,
         isPrincipal: true,
         priceOnline: '$9,676',
-        pricePresencial: '$10,967'
+        pricePresencial: '$10,967',
+        priority: 12
     },
     {
         path: 'style-diagnosis',
@@ -142,7 +144,8 @@ export const services: Service[] = [
         `,
         isPrincipal: false,
         priceOnline: '$2,101',
-        pricePresencial: '$2,231'
+        pricePresencial: '$2,231',
+        priority: 4
     },
     {
         path: 'face-and-body-type',
@@ -180,7 +183,8 @@ export const services: Service[] = [
         `,
         isPrincipal: false,
         priceOnline: '$2,101',
-        pricePresencial: '$2,315'
+        pricePresencial: '$2,315',
+        priority: 5
     },
     {
         path: 'color-analysis',
@@ -221,7 +225,8 @@ export const services: Service[] = [
         `,
         isPrincipal: false,
         priceOnline: '$2,486',
-        pricePresencial: '$2,829'
+        pricePresencial: '$2,829',
+        priority: 6
     },
     {
         path: 'sos-tip',
@@ -257,7 +262,8 @@ export const services: Service[] = [
         presencialDescription: "",
         isPrincipal: false,
         priceOnline: '1 pregunta $300/ 3 preguntas $750',
-        pricePresencial: ''
+        pricePresencial: '',
+        priority: 7
     },
     {
         path: 'closet-detox',
@@ -298,7 +304,8 @@ export const services: Service[] = [
         `,
         isPrincipal: false,
         priceOnline: '$2,259',
-        pricePresencial: '$1,849'
+        pricePresencial: '$1,849',
+        priority: 8
     },
     {
         path: 'personal-shopper',
@@ -330,7 +337,8 @@ export const services: Service[] = [
         `,
         isPrincipal: false,
         priceOnline: '$1,839',
-        pricePresencial: '$2,159'
+        pricePresencial: '$2,159',
+        priority: 9
     },
     {
         path: 'advice-per-event',
@@ -363,7 +371,8 @@ export const services: Service[] = [
         `,
         isPrincipal: false,
         priceOnline: '$1,389',
-        pricePresencial: '$1,539'
+        pricePresencial: '$1,539',
+        priority: 10
     },
     {
         path: 'verbal-and-non-verbal-image',
@@ -409,7 +418,8 @@ export const services: Service[] = [
         `,
         isPrincipal: true,
         priceOnline: '$3,865',
-        pricePresencial: '$4,154'
+        pricePresencial: '$4,154',
+        priority: 11
     },
     {
         path: '360-image',
@@ -477,7 +487,8 @@ export const services: Service[] = [
         `,
         isPrincipal: true,
         priceOnline: '$12,209',
-        pricePresencial: '$17,651'
+        pricePresencial: '$17,651',
+        priority: 2,
     },
     {
         path: 'pro-image',
@@ -544,6 +555,7 @@ export const services: Service[] = [
         `,
         isPrincipal: false,
         priceOnline: '$9,676',
-        pricePresencial: '$10,967'
+        pricePresencial: '$10,967',
+        priority: 3
     }
 ];

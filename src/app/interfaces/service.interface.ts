@@ -8,4 +8,5 @@ export interface Service {
     isPrincipal: boolean;
     priceOnline: string;
     pricePresencial: string;
+    priority: number
 }
