@@ -34,9 +34,9 @@ export class ServiceDetailComponent implements OnInit {
   }
 
   initializePrice(): void {
-    if (!this.service?.priceOnline || !this.service?.onlineDescription) {
+    if (!this.service?.priceOnline) {
       this.selectedPrice = 'presencial';
-    } else if (!this.service?.pricePresencial || !this.service?.presencialDescription) {
+    } else if (!this.service?.pricePresencial) {
       this.selectedPrice = 'online';
     }
   }
@@ -52,10 +52,18 @@ export class ServiceDetailComponent implements OnInit {
   }
 
   hasMultipleModalities(): boolean {
-    return !!(this.service?.priceOnline && this.service?.onlineDescription) && !!(this.service?.pricePresencial && this.service?.presencialDescription);
+    return !!(this.service?.priceOnline && this.service?.pricePresencial);
+  }
+
+  hasAnyDescription(): boolean {
+    return !!(this.service?.onlineDescription || this.service?.presencialDescription);
   }
 
   onPriceChange(): void {
     // This method will be triggered on price select change
+  }
+
+  navigateToAllServices(): void {
+    this.router.navigate(['/services']);
   }
 }

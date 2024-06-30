@@ -21,6 +21,11 @@
                 </div>
             </div>
         </div>
+        <!-- Link para ver todos los servicios -->
+        <div class="text-end mt-2">
+            <a class="see-all-services" (click)="navigateToAllServices()">Ver todos los servicios <i
+                    class="fas fa-arrow-right"></i></a>
+        </div>
     </section>
 
     <!-- Testimonios -->
@@ -28,73 +33,15 @@
         <h2 class="text-center py-3">Testimonios</h2>
         <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"
-                    aria-label="Slide 4"></button>
+                <button *ngFor="let review of reviews; let i = index" type="button"
+                    [attr.data-bs-target]="'#testimonialCarousel'" [attr.data-bs-slide-to]="i" [class.active]="i === 0"
+                    [attr.aria-current]="i === 0 ? 'true' : null" [attr.aria-label]="'Slide ' + (i + 1)"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div *ngFor="let review of reviews; let i = index" class="carousel-item" [class.active]="i === 0">
                     <div class="testimonial">
-                        <p>Me gustó mucho tu servicio. Eres muy paciente, sabes explicarte muy bien y creo que los
-                            servicios que
-                            ofreces son muy completos, es un plus que tengas la prueba de drapeados presencial en tu
-                            oficina y que
-                            tengas la opción de ir al closet de las personas para volverlo más funcional.</p>
-                        <p class="text-end">- FERNANDA ANAYA, 25 AÑOS.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial">
-                        <p>He tenido una experiencia excepcional con el servicio de consultoría. Su profesionalismo,
-                            conocimiento y
-                            dedicación han sido fundamentales para el crecimiento de mi imagen personal. Siempre está
-                            disponible
-                            para resolver cualquier duda y ofrecer soluciones efectivas en base a mi manual de imagen.
-                            Recomiendo
-                            ampliamente sus servicios a cualquier persona que busque asesoría de alta calidad.</p>
-                        <p class="text-end">- AXEL GALEANA, 20 AÑOS.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial">
-                        <p>Buscando guía para mejorar mi imagen personal, encontré a Victoria. No estaba segura de qué
-                            quería, pero
-                            desde la primera entrevista, me encantó su trato y los resultados que prometía. Victoria fue
-                            muy amable
-                            y me ayudó a elegir el servicio que más se acomodaba a mis necesidades. El manual que me
-                            entregó fue
-                            todo lo que necesitaba: incluyó detalles sobre mi colorimetría, vestuario, cabello,
-                            maquillaje y estilo
-                            personal. Todo lo que me recomendó resonó conmigo, y desde que he seguido sus indicaciones,
-                            me siento
-                            mucho más confiada con mi imagen. Me encantó que sus recomendaciones incluyeron prendas
-                            accesibles en
-                            tiendas que adoro, e incluso proporcionó los enlaces para comprarlas. Recomiendo 100% sus
-                            servicios para
-                            quienes se sienten perdidos sobre su estilo y necesitan una guía. ¡Gracias por todo,
-                            Victoria!</p>
-                        <p class="text-end">- ALEJANDRA MELÉNDEZ, 28 AÑOS.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial">
-                        <p>Soy una persona muy introvertida, que duda de empezar algo con alguien que no le da confianza
-                            pero, Desde
-                            la primer consulta me agradó su personalidad y trato.</p>
-                        <p>Antes de llegar con ella, solía sentirme insegura sobre mis elecciones de vestuario y no
-                            lograba definir
-                            mi estilo personal. Victoria, con su enfoque personalizado, no solo me ayudó a vestirme
-                            mejor, sino que
-                            también me brindó valiosas ideas sobre qué estilos se adaptan mejor a mi figura y
-                            personalidad. Me
-                            encantó el Manual , ya que te explica de manera precisa que sí y que no ????.
-                            Muchas gracias Vic.</p>
-                        <p class="text-end">- RUTH ZAMORA, 36 AÑOS.</p>
+                        <p>{{ review.content }}</p>
+                        <p class="text-end">- {{ review.author }}, {{ review.age }}</p>
                     </div>
                 </div>
             </div>

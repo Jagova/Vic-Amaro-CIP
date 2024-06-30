@@ -1,9 +1,17 @@
 <div class="container-fluid px-4 pt-5" style="background-color: #0C2738;">
     <article *ngIf="service" class="container py-5">
-        <header>
-            <h1 class="display-4 text-center mb-5 subtitle-font">{{ service.title }}</h1>
+        <header class="d-flex justify-content-between align-items-center mb-5">
+            <a class="see-all-services" (click)="navigateToAllServices()">
+                <i class="fas fa-arrow-left"></i> Todos los servicios
+            </a>
+            <h1 class="display-4 text-center subtitle-font flex-grow-1">{{ service.title }}</h1>
         </header>
         <div class="row">
+            <div class="col-12 d-block d-md-none text-center mb-4">
+                <a class="see-all-services-mobile" (click)="navigateToAllServices()">
+                    <i class="fas fa-arrow-left"></i> Todos los servicios
+                </a>
+            </div>
             <div class="col-md-6 text-center">
                 <figure>
                     <img [src]="service.image" class="img-fluid fixed-size" [alt]="service.title">
@@ -34,8 +42,13 @@
         <div class="row mt-4">
             <div class="col-12">
                 <section>
-                    <h2 class="subtitle-font text-center">¿Cómo funciona la modalidad {{ selectedPrice === 'online' ?
+                    <h2 *ngIf="hasMultipleModalities(); else simpleModality" class="subtitle-font text-center">¿Cómo
+                        funciona la modalidad
+                        {{ selectedPrice === 'online' ?
                         'online' : 'presencial' }}?</h2>
+                    <ng-template #simpleModality>
+                        <h2 *ngIf="hasAnyDescription()" class="subtitle-font text-center">¿Cómo funciona?</h2>
+                    </ng-template>
                     <div class="mt-4" [innerHTML]="getDescription()"></div>
                 </section>
             </div>

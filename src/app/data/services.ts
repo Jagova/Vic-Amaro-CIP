@@ -12,9 +12,13 @@ export const services: Service[] = [
                     <li>Diagnóstico de estilo.</li>
                     <li>Face & body type.</li>
                     <li>Análisis de color.</li>
-                    <li>Recomendaciones personalizadas por prenda</li>
+                    
+                </ul>
+                <p>Recomendaciones personalizadas:</p>
+                <ul>
+                    <li>Prenda</li>
                     <li>Combinaciones de color</li>
-                    <li>Recomendaciones de cortes de cabello, tintes y maquillaje.</li>
+                    <li>Cortes de cabello, tintes y maquillaje.</li>
                     <li>Armario cápsula</li>
                     <li>Ejemplos de outfit por evento</li>
                     <li>Ejemplo de atuendo laboral</li>
@@ -54,57 +58,38 @@ export const services: Service[] = [
         image: 'assets/images/services/professional-image.jpeg',
         title: 'Manual de imagen profesional',
         description: `
-            <div>
-                <p>Incluye:</p>
-                <ul>
-                    <li>Diagnóstico de estilo.</li>
-                    <li>Face & body type.</li>
-                    <li>Análisis de color.</li>
-                    <li>Recomendaciones personalizadas por prenda</li>
-                    <li>Combinaciones de color</li>
-                    <li>Armario cápsula</li>
-                    <li>Ejemplos de outfit por evento</li>
-                    <li>Ejemplo de atuendo laboral</li>
-                </ul>
-                <p><strong>Modalidad:</strong> Virtual (Vía Zoom) o presencial en San Luis Potosí.</p>
-                <p>Para hombres y mujeres de cualquier edad y ocupación.</p>
-            </div>
-        `,
+    <div>
+      <p>Con este servicio podrás comenzar a construir o mejorar tu imagen en el ámbito profesional y conocer aquellas herramientas que pueden ayudarte a alcanzar tus objetivos (¿un aumento? ¿ascender de puesto? ¿be the boss?)</p>
+      <p>Podrás mejorar tu imagen personal en el ámbito laboral a partir de:</p>
+      <ul>
+        <li>Definir tu estilo personal.</li>
+        <li>Analizar tu contexto laboral.</li>
+        <li>Aprender a implementar tu estilo en el trabajo por medio de tu apariencia física, lenguaje, movimientos corporales y protocolos profesionales.</li>
+      </ul>
+      <p><strong>Modalidad:</strong> Virtual (Vía Zoom) o presencial en San Luis Potosí.</p>
+      <p>Para hombres y mujeres de cualquier edad y ocupación.</p>
+    </div>
+  `,
         onlineDescription: `
-            <div>
-                <ol>
-                    <li>Responderás un cuestionario, un test psicométrico y un test de estilo para reconocer tu esencia personal y me enviaras las respuestas al correo electrónico info@cipvictoriamaro.com.mx (Duración apróx. 1 hora).</li>
-                    <li>Tendremos una entrevista 1 a 1 para conocerte mejor y reafirmar tu estilo (Duración apróx. 3-4 horas).</li>
-                    <li>Con la ayuda de alguien más te pediré que te tomes unas fotografías y mediciones para determinar tu tipo de rostro, cuerpo y cromometría y me las enviarás al correo info@cipvictoriamaro.com.mx.</li>
-                    <li>Te entregaré un PDF con la información completa de análisis y diagnóstico con recomendaciones en un máximo de 30 días.</li>
-                    <li>Tendremos una videollamada para hacer tu closet détox, para esto te pediré que 1 hora antes de la cita, saques todas las prendas de tu closet (incluyendo accesorios, zapatos, bolsos, etc.) y los colocarás sobre una mesa o superficie plana.</li>
-                    <li>Juntos/as clasificaremos todas tus prendas y accesorios y decidiremos que se va y que se queda.</li>
-                    <li>Te enseñaré un método para poder organizar las prendas que regresarán a tu closet y que puedas tenerlas de una manera accesible y ordenada priorizando el mantenimiento de tu ropa.</li>
-                    <li>Te enviaré una lista con aquellas cosas que podrías adquirir para complementar.</li>
-                    <li>De acuerdo a tu presupuesto y guiándome en la lista de faltantes de tu closet détox, buscaré en tiendas online aquellas prendas y accesorios que ayuden a complementar tu guardarropa.</li>
-                    <li>Te enviaré la lista de compras para que puedas pedirlos directamente a la dirección de tu preferencia.</li>
-                </ol>
-            </div>
-        `,
+    <div>
+      <ol>
+        <li>Tendremos dos sesiones de zoom para conocerte mejor a ti, a tu ambiente laboral y definir tus objetivos profesionales.</li>
+        <li>Se te enviaran las recomendaciones pertinentes según tu esencia personal, código de vestimenta, ocupación y ambiente laboral.</li>
+      </ol>
+    </div>
+  `,
         presencialDescription: `
-            <div>
-                <ol>
-                    <li>Responderás un cuestionario, un test psicométrico y un test de estilo para reconocer tu esencia personal y me enviaras las respuestas al correo electrónico info@cipvictoriamaro.com.mx (Duración apróx. 1 hora).</li>
-                    <li>Tendremos una entrevista 1 a 1 para conocerte mejor y reafirmar tu estilo. (Duración apróx. 3-4 horas).</li>
-                    <li>Se hará una sesión fotográfica y toma de medidas para determinar tu tipo de rostro, cuerpo y cromometría. (Duración apróx. 30-45 min.).</li>
-                    <li>Se reafirmará tu cromometría por medio de una prueba de drapeados y se configurará tu paleta de colores personalizada. (Duración apróx. 1-2 horas).</li>
-                    <li>Te entregaré un PDF con la información completa de análisis y diagnóstico con recomendaciones en un máximo de 30 días.</li>
-                    <li>Tendremos una sesión de apróx. 3 horas en las que clasificaremos todas tus prendas, accesorios, calzado y bolsos, para esto te pediré que saques todas tus prendas y accesorios 1 hora antes de nuestra cita.</li>
-                    <li>Te enseñaré un método para poder organizar las prendas que regresarán a tu closet y que puedas tenerlas de una manera accesible y ordenada priorizando el mantenimiento de tu ropa.</li>
-                    <li>Te enviaré una lista con aquellas cosas que podrías adquirir para complementar.</li>
-                    <li>Dependiendo de tus necesidades de vestimenta y presupuesto crearé una ruta de tiendas con 4 opciones diferentes para hacer la búsqueda de tus prendas faltantes.</li>
-                    <li>Nos reuniremos aprox. 2-3 horas para encontrar las prendas y que te las puedas probar.</li>
-                </ol>
-            </div>
-        `,
+    <div>
+      <ol>
+        <li>Nos reuniremos para conocerte mejor a ti, a tu ambiente laboral y definir tus objetivos profesionales.</li>
+        <li><strong>OPCIONAL:</strong> Te acompañaré a tu trabajo por un día para comprender mejor tus fortalezas y áreas de oportunidad para lograr ser percibido como deseas.</li>
+        <li>Nos volveremos a reunir para brindarte las recomendaciones pertinentes según tu esencia personal, código de vestimenta, ocupación y ambiente laboral.</li>
+      </ol>
+    </div>
+  `,
         isPrincipal: true,
-        priceOnline: '$9,676',
-        pricePresencial: '$10,967',
+        priceOnline: '$4,306',
+        pricePresencial: '$5,615',
         priority: 12
     },
     {
@@ -136,7 +121,7 @@ export const services: Service[] = [
         presencialDescription: `
             <div>
                 <ol>
-                    <li>Responderás un cuestionario, unas pruebas psicométricas y un test de estilo para reconocer tu esencia personal y me enviaras las respuestas al correo electrónico amarolopezv@gmail.com (Duración apróx. 1 hora).</li>
+                    <li>Responderás un cuestionario, unas pruebas psicométricas y un test de estilo para reconocer tu esencia personal y me enviaras las respuestas al correo electrónico info@cipvictoriamaro.com (Duración apróx. 1 hora).</li>
                     <li>Tendremos una entrevista 1 a 1 para conocerte mejor y reafirmar tu estilo (Duración apróx. 2-3 horas).</li>
                     <li>Te Entregaré un PDF con la información completa de análisis y diagnóstico en un máximo de 14 días.</li>
                 </ol>
@@ -242,23 +227,11 @@ export const services: Service[] = [
                     <li>¿Qué camisa me conviene usar para una entrevista de trabajo?</li>
                     <li>¿Cuál es el color de labial que mejor me queda?</li>
                 </ul>
-                <p><strong>Modalidad:</strong> Online.</p>
                 <p>*Paquetes de 1 a 3 preguntas.</p>
                 <p>*Dependiendo de la pregunta podría pedirte que me contestes un test, me envíes alguna fotografía o medición.</p>
             </div>
         `,
-        onlineDescription: `
-            <div>
-                <p>Haz una pregunta específica relacionada a tu estilo personal, tipo de rostro, cuerpo o cromometría sin un manual de imagen completo. Recibiras una respuesta en menos de 24 horas.</p>
-                <p>Ej.:</p>
-                <ul>
-                    <li>¿Cuáles lentes me compro?</li>
-                    <li>¿De qué color me pinto el cabello?</li>
-                    <li>¿Qué camisa me conviene usar para una entrevista de trabajo?</li>
-                    <li>¿Cuál es el color de labial que mejor me queda?</li>
-                </ul>
-            </div>
-        `,
+        onlineDescription: "",
         presencialDescription: "",
         isPrincipal: false,
         priceOnline: '1 pregunta $300/ 3 preguntas $750',
@@ -268,7 +241,7 @@ export const services: Service[] = [
     {
         path: 'closet-detox',
         image: 'assets/images/services/closet-detox.jpeg',
-        title: 'Closet Detox',
+        title: 'Clóset Detox',
         description: `
             <div>
                 <p>*Servicio complementario al Manual de Imagen Física.</p>
@@ -277,18 +250,19 @@ export const services: Service[] = [
                     <li>Siempre tendrás algo que ponerte.</li>
                     <li>Sabrás reconocer las prendas que te hacen falta y no gastarás dinero de más al comprar ropa.</li>
                     <li>Soltarás aquellas prendas que ya no deberían de formar parte de tu vida.</li>
-                    <li>Optimizarás el espacio en tu closet y sabrás como combinar todo.</li>
+                    <li>Optimizarás el espacio en tu clóset y sabrás como combinar todo.</li>
                     <li>Utilizarás todas tus prendas y les sacarás el máximo provecho.</li>
                 </ul>
                 <p><strong>Modalidad:</strong> Virtual (Vía Zoom) o presencial en San Luis Potosí.</p>
+                <p>Para hombres y mujeres de cualquier edad y ocupación.</p>
             </div>
         `,
         onlineDescription: `
             <div>
                 <ol>
-                    <li>1 hora antes nuestra videollamada, sacarás todas las prendas de tu closet (incluyendo accesorios, zapatos, bolsos, etc.) y los colocarás sobre una mesa o superficie plana.</li>
+                    <li>1 hora antes nuestra videollamada, sacarás todas las prendas de tu clóset (incluyendo accesorios, zapatos, bolsos, etc.) y los colocarás sobre una mesa o superficie plana.</li>
                     <li>Tendremos una sesión de apróx 3 horas en las que juntos/as clasificaremos todo.</li>
-                    <li>Te enseñaré un método para poder organizar las prendas que regresarán a tu closet y para que puedas tenerlas de una manera accesible y ordenada, priorizando el mantenimiento de tu ropa.</li>
+                    <li>Te enseñaré un método para poder organizar las prendas que regresarán a tu clóset y para que puedas tenerlas de una manera accesible y ordenada, priorizando el mantenimiento de tu ropa.</li>
                     <li>Te enviaré una lista con aquellas cosas que podrías adquirir para complementar.</li>
                 </ol>
             </div>
@@ -297,14 +271,14 @@ export const services: Service[] = [
             <div>
                 <ol>
                     <li>Tendremos una sesión de apróx. 3 horas en las que clasificaremos todas tus prendas, accesorios, calzado y bolsos, para esto te pediré que saques todas tus prendas y accesorios 1 hora antes de nuestra cita.</li>
-                    <li>Te enseñaré un método para poder organizar las prendas que regresarán a tu closet y que puedas tenerlas de una manera accesible y ordenada, priorizando el mantenimiento de tu ropa.</li>
+                    <li>Te enseñaré un método para poder organizar las prendas que regresarán a tu clóset y que puedas tenerlas de una manera accesible y ordenada, priorizando el mantenimiento de tu ropa.</li>
                     <li>Te enviaré una lista con aquellas cosas que podrías adquirir para complementar.</li>
                 </ol>
             </div>
         `,
         isPrincipal: false,
-        priceOnline: '$2,259',
-        pricePresencial: '$1,849',
+        priceOnline: '$1,849',
+        pricePresencial: '$2,259',
         priority: 8
     },
     {
@@ -313,7 +287,7 @@ export const services: Service[] = [
         title: 'Personal Shopper',
         description: `
             <div>
-                <p>*Servicio complementario al Manual de Imagen Física y Closet detox.</p>
+                <p>*Servicio complementario al Manual de Imagen Física y Clóset detox.</p>
                 <p>Con este servicio tendrás un asesoramiento personalizado para encontrar en tienda las prendas y accesorios que podrían complementar tu guardarropa sin gastar dinero de más.</p>
                 <p><strong>Modalidad:</strong> Virtual (Vía Zoom) o presencial en San Luis Potosí.</p>
                 <p>Para hombres y mujeres de cualquier edad y ocupación.</p>
@@ -322,7 +296,7 @@ export const services: Service[] = [
         onlineDescription: `
             <div>
                 <ol>
-                    <li>De acuerdo con tu presupuesto y guiándome en la lista de faltantes de tu closet detox, buscaré en tiendas online aquellas prendas y accesorios que ayuden a complementar tu guardarropa.</li>
+                    <li>De acuerdo con tu presupuesto y guiándome en la lista de faltantes de tu clóset detox, buscaré en tiendas online aquellas prendas y accesorios que ayuden a complementar tu guardarropa.</li>
                     <li>Te enviaré la lista de compras para que puedas pedirlos directamente a la dirección de tu preferencia.</li>
                 </ol>
             </div>
@@ -331,7 +305,7 @@ export const services: Service[] = [
             <div>
                 <ol>
                     <li>Dependiendo de tus necesidades de vestimenta y presupuesto crearé una ruta de tiendas con 4 opciones diferentes para hacer la búsqueda de tus prendas faltantes.</li>
-                    <li>Nos reuniremos durante aprox. 2-3 horas para encontrar las prendas y que te las puedas probar.</li>
+                    <li>Nos reuniremos durante apróx. 2-3 horas para encontrar las prendas y que te las puedas probar.</li>
                 </ol>
             </div>
         `,
@@ -444,7 +418,7 @@ export const services: Service[] = [
                 </ul>
                 <p>Servicios adicionales:</p>
                 <ul>
-                    <li>Closet détox</li>
+                    <li>Clóset détox</li>
                     <li>Personal Shopper</li>
                     <li>Auditoría en Imagen Verbal y No Verbal</li>
                     <li>Capacitación en protocolos profesionales</li>
@@ -457,15 +431,28 @@ export const services: Service[] = [
             <div>
                 <ol>
                     <li>Responderás un cuestionario, un test psicométrico y un test de estilo para reconocer tu esencia personal y me enviaras las respuestas al correo electrónico info@cipvictoriamaro.com.mx (Duración apróx. 1 hora).</li>
-                    <li>Tendremos una entrevista 1 a 1 para conocerte mejor y reafirmar tu estilo. (Duración apróx. 3-4 horas).</li>
+                    <li>Tendremos una entrevista 1 a 1 para conocerte mejor y reafirmar tu estilo (Duración apróx. 3-4 horas).</li>
                     <li>Con la ayuda de alguien más te pediré que te tomes unas fotografías y mediciones para determinar tu tipo de rostro, cuerpo y cromometría y me las enviarás al correo info@cipvictoriamaro.com.mx.</li>
                     <li>Te entregaré un PDF con la información completa de análisis y diagnóstico con recomendaciones en un máximo de 30 días.</li>
-                    <li>Tendremos una videollamada para hacer tu closet détox, para esto te pediré que 1 hora antes de la cita, saques todas las prendas de tu closet (incluyendo accesorios, zapatos, bolsos, etc.) y los colocarás sobre una mesa o superficie plana.</li>
+                    <li>Tendremos una videollamada de para hacer tu closet détox, para esto te pediré que 1 hora antes de la cita, saques todas las prendas de tu closet (incluyendo accesorios, zapatos, bolsos, etc.) y los colocarás sobre una mesa o superficie plana.</li>
                     <li>Juntos/as clasificaremos todas tus prendas y accesorios y decidiremos que se va y que se queda.</li>
                     <li>Te enseñaré un método para poder organizar las prendas que regresarán a tu closet y que puedas tenerlas de una manera accesible y ordenada priorizando el mantenimiento de tu ropa.</li>
                     <li>Te enviaré una lista con aquellas cosas que podrías adquirir para complementar.</li>
                     <li>De acuerdo a tu presupuesto y guiándome en la lista de faltantes de tu closet détox, buscaré en tiendas online aquellas prendas y accesorios que ayuden a complementar tu guardarropa.</li>
                     <li>Te enviaré la lista de compras para que puedas pedirlos directamente a la dirección de tu preferencia.</li>
+                    <li>Tendremos una sesión de zoom para conocerte mejor y definir tus objetivos.</li>
+                    <li>Me enviarás unos videos y fotografías de:
+                        <ul>
+                        <li>Video de cuerpo completo hablando a modo de discurso sobre tu profesión.</li>
+                        <li>Video de rostro hablando a modo de discurso sobre tu hobbie favorito o algún tema que te apasione.</li>
+                        <li>Video caminando (se enviará ejemplo).</li>
+                        <li>Fotografía sentado (se enviará ejemplo).</li>
+                        </ul>
+                    </li>
+                    <li>Se enviarán las recomendaciones pertinentes y se te pedirá que se vuelvan a enviar los videos y fotografías con las correcciones.</li>
+                    <li>Se tendrá una sesión de zoom de preguntas y respuestas para, de ser necesario, ajustar las recomendaciones.</li>
+                    <li>Tendremos una sesión de zoom para conocerte mejor tu ambiente laboral y definir tus objetivos profesionales.</li>
+                    <li>Se te enviaran las recomendaciones pertinentes según tu esencia personal, código de vestimenta, ocupación y ambiente laboral enfocadas al ámbito profesional.</li>
                 </ol>
             </div>
         `,
@@ -481,8 +468,14 @@ export const services: Service[] = [
                     <li>Te enseñaré un método para poder organizar las prendas que regresarán a tu closet y que puedas tenerlas de una manera accesible y ordenada priorizando el mantenimiento de tu ropa.</li>
                     <li>Te enviaré una lista con aquellas cosas que podrías adquirir para complementar.</li>
                     <li>Dependiendo de tus necesidades de vestimenta y presupuesto crearé una ruta de tiendas con 4 opciones diferentes para hacer la búsqueda de tus prendas faltantes.</li>
-                    <li>Nos reuniremos aprox. 2-3 horas para encontrar las prendas y que te las puedas probar.</li>
+                    <li>Nos reuniremos apróx. 2-3 horas para encontrar las prendas y que te las puedas probar.</li>
+                    <li>Tendremos una reunión para conocerte mejor y definir tus objetivos. En esta sesión te pediré decir un discurso sobre tu profesión y otro sobre tu hobbie favorito o tema de tu interés mientras eres grabado. Se te tomará otro video para analizar tu caminado y unas fotografías para evaluar tu postura al sentarte, gesticulaciones y ademanes.</li>
+                    <li>Tendremos de dos a tres sesiones más para perfeccionar tu discurso y movimientos corporales y resolver dudas.</li>
+                    <li>Nos reuniremos para conocerte mejor tu ambiente laboral y definir tus objetivos profesionales.</li>
+                    <li>OPCIONAL: Te acompañaré a tu trabajo por un día para comprender mejor tus fortalezas y áreas de oportunidad para lograr ser percibido como deseas.</li>
+                    <li>Nos volveremos a reunir para brindarte las recomendaciones pertinentes según tu esencia personal, código de vestimenta, ocupación y ambiente laboral enfocadas en el ambiente profesional.</li>
                 </ol>
+                <em>Punto 2 y 3 podrían tomarse en la misma sesión o por separado.</em>
             </div>
         `,
         isPrincipal: true,
@@ -513,7 +506,7 @@ export const services: Service[] = [
                 </ul>
                 <p>Servicios adicionales:</p>
                 <ul>
-                    <li>Closet détox</li>
+                    <li>Clóset détox</li>
                     <li>Personal Shopper</li>
                 </ul>
                 <p><strong>Modalidad:</strong> Virtual (Vía Zoom) o presencial en San Luis Potosí.</p>
@@ -527,11 +520,11 @@ export const services: Service[] = [
                     <li>Tendremos una entrevista 1 a 1 para conocerte mejor y reafirmar tu estilo (Duración apróx. 3-4 horas).</li>
                     <li>Con la ayuda de alguien más te pediré que te tomes unas fotografías y mediciones para determinar tu tipo de rostro, cuerpo y cromometría y me las enviarás al correo info@cipvictoriamaro.com.mx.</li>
                     <li>Te entregaré un PDF con la información completa de análisis y diagnóstico con recomendaciones en un máximo de 30 días.</li>
-                    <li>Tendremos una videollamada para hacer tu closet détox, para esto te pediré que 1 hora antes de la cita, saques todas las prendas de tu closet (incluyendo accesorios, zapatos, bolsos, etc.) y los colocarás sobre una mesa o superficie plana.</li>
+                    <li>Tendremos una videollamada para hacer tu clóset détox, para esto te pediré que 1 hora antes de la cita, saques todas las prendas de tu clóset (incluyendo accesorios, zapatos, bolsos, etc.) y los colocarás sobre una mesa o superficie plana.</li>
                     <li>Juntos/as clasificaremos todas tus prendas y accesorios y decidiremos que se va y que se queda.</li>
-                    <li>Te enseñaré un método para poder organizar las prendas que regresarán a tu closet y que puedas tenerlas de una manera accesible y ordenada priorizando el mantenimiento de tu ropa.</li>
+                    <li>Te enseñaré un método para poder organizar las prendas que regresarán a tu clóset y que puedas tenerlas de una manera accesible y ordenada priorizando el mantenimiento de tu ropa.</li>
                     <li>Te enviaré una lista con aquellas cosas que podrías adquirir para complementar.</li>
-                    <li>De acuerdo a tu presupuesto y guiándome en la lista de faltantes de tu closet détox, buscaré en tiendas online aquellas prendas y accesorios que ayuden a complementar tu guardarropa.</li>
+                    <li>De acuerdo a tu presupuesto y guiándome en la lista de faltantes de tu clóset détox, buscaré en tiendas online aquellas prendas y accesorios que ayuden a complementar tu guardarropa.</li>
                     <li>Te enviaré la lista de compras para que puedas pedirlos directamente a la dirección de tu preferencia.</li>
                 </ol>
             </div>
@@ -545,12 +538,11 @@ export const services: Service[] = [
                     <li>Se reafirmará tu cromometría por medio de una prueba de drapeados y se configurará tu paleta de colores personalizada. (Duración apróx. 1-2 horas).</li>
                     <li>Te entregaré un PDF con la información completa de análisis y diagnóstico con recomendaciones en un máximo de 30 días.</li>
                     <li>Tendremos una sesión de apróx. 3 horas en las que clasificaremos todas tus prendas, accesorios, calzado y bolsos, para esto te pediré que saques todas tus prendas y accesorios 1 hora antes de nuestra cita.</li>
-                    <li>Te enseñaré un método para poder organizar las prendas que regresarán a tu closet y que puedas tenerlas de una manera accesible y ordenada priorizando el mantenimiento de tu ropa.</li>
+                    <li>Te enseñaré un método para poder organizar las prendas que regresarán a tu clóset y que puedas tenerlas de una manera accesible y ordenada priorizando el mantenimiento de tu ropa.</li>
                     <li>Te enviaré una lista con aquellas cosas que podrías adquirir para complementar.</li>
                     <li>Dependiendo de tus necesidades de vestimenta y presupuesto crearé una ruta de tiendas con 4 opciones diferentes para hacer la búsqueda de tus prendas faltantes.</li>
-                    <li>Nos reuniremos aprox. 2-3 horas para encontrar las prendas y que te las puedas probar.</li>
+                    <li>Nos reuniremos apróx. 2-3 horas para encontrar las prendas y que te las puedas probar.</li>
                 </ol>
-                <p><strong>COSTO:</strong> Presencial: $10,967 | Online: $9,676</p>
             </div>
         `,
         isPrincipal: false,

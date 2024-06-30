@@ -1,7 +1,6 @@
 .cover-image {
     width: 100%;
     height: 80vh;
-    /* Ocupa el 80% de la altura de la pantalla */
     background-size: cover;
     background-position: 50% 30%;
 }
@@ -45,4 +44,20 @@
 
 .service-card {
     cursor: pointer;
+}
+
+.see-all-services {
+    text-decoration: none;
+    color: #F2EBE6;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.see-all-services:hover {
+    color: #BBC9D4;
+}
+
+.see-all-services i {
+    margin-left: 5px;
 }
