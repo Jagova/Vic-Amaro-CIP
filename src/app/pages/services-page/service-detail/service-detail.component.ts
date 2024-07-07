@@ -34,7 +34,7 @@ export class ServiceDetailComponent implements OnInit {
   }
 
   initializePrice(): void {
-    if (!this.service?.priceOnline) {
+    if (!this.service?.priceOnline || this.service?.pricePresencial) {
       this.selectedPrice = 'presencial';
     } else if (!this.service?.pricePresencial) {
       this.selectedPrice = 'online';

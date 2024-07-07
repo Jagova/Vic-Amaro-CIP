@@ -288,7 +288,7 @@ export const services: Service[] = [
         description: `
             <div>
                 <p>*Servicio complementario al Manual de Imagen Física y Clóset detox.</p>
-                <p>Con este servicio tendrás un asesoramiento personalizado para encontrar en tienda las prendas y accesorios que podrían complementar tu guardarropa sin gastar dinero de más.</p>
+                <p>Con este servicio tendrás un asesoramiento personalizado para encontrar en tiendas aquellas prendas y accesorios que podrían complementar tu guardarropa y que siempre tengas que ponerte.</p>
                 <p><strong>Modalidad:</strong> Virtual (Vía Zoom) o presencial en San Luis Potosí.</p>
                 <p>Para hombres y mujeres de cualquier edad y ocupación.</p>
             </div>
