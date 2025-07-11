@@ -1,4 +1,22 @@
-/* Asegúrate de que el main no tenga padding */
 main {
+    grid-area: main;
+}
+
+.app-container {
     padding: 0 !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+}
+
+app-header {
+    grid-area: header;
+}
+
+app-footer {
+    grid-area: footer;
 }

@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    /* Evita el desplazamiento horizontal */
 }
 
 .container-fluid {
@@ -14,7 +13,6 @@ body {
 .cover-image {
     width: 100%;
     height: 50vh;
-    /* Ajusta la altura según sea necesario */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,14 +35,12 @@ body {
 
 .btn-custom {
     background-color: #007bff;
-    /* Cambia este color según tus preferencias */
     border: none;
     color: white;
 }
 
 .btn-custom:hover {
     background-color: #0056b3;
-    /* Cambia este color según tus preferencias */
     border: none;
     color: white;
 }
@@ -56,7 +52,6 @@ body {
 
 .social-icons a:hover {
     color: #007bff;
-    /* Cambia este color según tus preferencias */
 }
 
 .text-center {

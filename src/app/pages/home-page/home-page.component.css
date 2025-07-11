@@ -61,3 +61,85 @@
 .see-all-services i {
     margin-left: 5px;
 }
+
+.review-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    min-height: 320px;
+}
+
+.review-card {
+    background-color: #F2EBE6;
+    color: #0C2738;
+    border-radius: 15px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    height: 360px;
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+
+.main-review {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
+}
+
+.side-review {
+    transform: scale(0.9);
+    opacity: 0.5;
+    filter: blur(1px);
+    z-index: 1;
+}
+
+.review-card p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    font-size: 0.95rem;
+}
+
+.stars {
+    color: gold;
+}
+
+.no-bg {
+    background: none !important;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.no-bg:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .review-carousel {
+        flex-wrap: nowrap;
+    }
+
+    .review-carousel>.mx-2 {
+        display: none;
+    }
+
+    .review-carousel>.mx-2.main-review {
+        display: block;
+    }
+
+    .main-review {
+        transform: scale(1);
+        opacity: 1;
+        filter: none;
+    }
+}

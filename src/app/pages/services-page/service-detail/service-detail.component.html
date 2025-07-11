@@ -4,7 +4,7 @@
             <a class="see-all-services" (click)="navigateToAllServices()">
                 <i class="fas fa-arrow-left"></i> Todos los servicios
             </a>
-            <h1 class="display-4 text-center subtitle-font flex-grow-1">{{ service.title }}</h1>
+            <h1 class="display-4 text-center subtitle-font flex-grow-1">{{ service()!.title }}</h1>
         </header>
         <div class="row">
             <div class="col-12 d-block d-md-none text-center mb-4">
@@ -14,42 +14,57 @@
             </div>
             <div class="col-md-6 text-center">
                 <figure>
-                    <img [src]="service.image" class="img-fluid fixed-size" [alt]="service.title">
+                    <img [src]="service()!.image" class="img-fluid fixed-size" [alt]="service()!.title">
                 </figure>
             </div>
             <div class="col-md-6">
                 <section>
-                    <div [innerHTML]="service.description"></div>
+                    <div [innerHTML]="service()!.description"></div>
+                    <br>
                     <div class="mt-4" *ngIf="hasMultipleModalities()">
                         <label for="priceSelect" class="form-label">Modalidad:</label>
                         <select id="priceSelect" class="form-select" [(ngModel)]="selectedPrice"
                             (change)="onPriceChange()">
-                            <option value="online" *ngIf="service.priceOnline && service.onlineDescription">Online
+                            <option value="online" *ngIf="service()!.priceOnline">Online
                             </option>
-                            <option value="presencial" *ngIf="service.pricePresencial && service.presencialDescription">
+                            <option value="presencial"
+                                *ngIf="service()!.pricePresencial">
                                 Presencial</option>
                         </select>
                     </div>
                     <div class="mt-4" *ngIf="!hasMultipleModalities()">
-                        <p class="form-label">Modalidad: {{ selectedPrice === 'online' ? 'Online' : 'Presencial' }}</p>
+                        <p class="form-label">Modalidad: {{service()?.title == "Asesoria Express" ? "Online y presencial" 
+                        : selectedPrice()
+                            === 'online' ? 'Online' : 'Presencial' }}
+                        </p>
                     </div>
                     <div class="mt-4">
-                        <h4>Precio: {{ getPrice() }}</h4>
+                        <h4>Precio: {{ price() }}</h4>
                     </div>
+                    <!-- <a [href]="'https://wa.me/5214443386742?text=' + encodeWhatsAppMessage(service()!.title)"
+                        target="_blank" class="button-cita mt-4 title-font">
+                        ✨&nbsp;&nbsp;HAZ TU CITA
+                        AQUÍ&nbsp;&nbsp;✨
+                    </a> -->
+                     <a [href]="selectedPrice() === 'online' ? service()?.onlineLink : service()?.presencialLink"
+                        target="_blank" class="button-cita mt-4 title-font">
+                        ✨&nbsp;&nbsp;HAZ TU CITA
+                        AQUÍ&nbsp;&nbsp;✨
+                    </a>
                 </section>
             </div>
         </div>
         <div class="row mt-4">
             <div class="col-12">
                 <section>
-                    <h2 *ngIf="hasMultipleModalities(); else simpleModality" class="subtitle-font text-center">¿Cómo
+                    <h2 *ngIf="hasAnyDescription(); else simpleModality" class="subtitle-font text-center">¿Cómo
                         funciona la modalidad
-                        {{ selectedPrice === 'online' ?
+                        {{ selectedPrice() === 'online' ?
                         'online' : 'presencial' }}?</h2>
                     <ng-template #simpleModality>
                         <h2 *ngIf="hasAnyDescription()" class="subtitle-font text-center">¿Cómo funciona?</h2>
                     </ng-template>
-                    <div class="mt-4" [innerHTML]="getDescription()"></div>
+                    <div class="mt-4" [innerHTML]="description()"></div>
                 </section>
             </div>
         </div>

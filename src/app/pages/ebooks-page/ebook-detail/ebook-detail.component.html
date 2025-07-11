@@ -1,0 +1,55 @@
+<div class="container-fluid p-4" style="background-color: #0C2738; color: #F2EBE6;" *ngIf="ebook">
+    <section class="text-center py-5 title-font">
+        <h1 class="display-4 text-uppercase">{{ ebook.title }}</h1>
+    </section>
+
+    <section class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center mb-4">
+                <img [src]="ebook.image" [alt]="ebook.title" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <div [innerHTML]="ebook.description"></div>
+
+                <div class="mt-4">
+                    <!-- <a *ngIf="ebook.etsyUrl" [href]="ebook.etsyUrl" class="btn btn-outline-light me-2" target="_blank">
+                        Comprar en Etsy
+                    </a> -->
+                    <!-- <a *ngIf="ebook.hotmartUrl" [href]="ebook.hotmartUrl" class="btn btn-outline-light" target="_blank">
+                    </a> -->
+                    <a [href]="ebook.hotmartUrl" target="_blank" class="button-cita mt-4 title-font">
+                        ✨&nbsp;&nbsp; Comprar en Hotmart
+                        &nbsp;&nbsp;✨
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mt-5" *ngIf="ebook.gallery && ebook.gallery.length > 0">
+        <h3 class="text-center mb-4 title-font">Vista previa del ebook</h3>
+        <div class="ebook-slider-container position-relative overflow-hidden">
+            <div class="ebook-slider d-flex gap-3 py-2 px-1">
+                <!-- Imágenes originales -->
+                <ng-container *ngFor="let img of ebook.gallery">
+                    <div class="flex-shrink-0" style="width: 420px;">
+                        <img [src]="img" alt="Vista previa del ebook" class="img-fluid rounded shadow w-100"
+                            style="object-fit: cover;">
+                    </div>
+                </ng-container>
+
+                <!-- Duplicado para bucle infinito -->
+                <ng-container *ngFor="let img of ebook.gallery">
+                    <div class="flex-shrink-0" style="width: 420px;">
+                        <img [src]="img" alt="Vista previa del ebook" class="img-fluid rounded shadow w-100"
+                            style="object-fit: cover;">
+                    </div>
+                </ng-container>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+</div>

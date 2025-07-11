@@ -43,3 +43,40 @@ button:hover {
     background-color: #A1B3C2 !important;
     color: #F0F0F0 !important;
 }
+
+.button-cita {
+    background-color: transparent !important;
+    border: 2px #BBC9D4 solid !important;
+    height: 45px !important;
+    width: 300px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    text-decoration: none;
+    color: #BBC9D4;
+}
+
+.button-cita:hover {
+    border: 2px #F2EBE6 solid !important;
+    color: #F2EBE6;
+}
+
+ul {
+    list-style: none;
+    padding-left: 1.2em;
+}
+
+ul li::before {
+    content: '✦';
+    color: #F2EBE6;
+    font-size: 1rem;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.2em;
+}
+
+ul li.skip-bullet::before {
+    content: none;
+}

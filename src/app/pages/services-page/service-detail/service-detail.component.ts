@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, computed, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Service } from '../../../interfaces/service.interface';
 import { NgIf } from '@angular/common';
@@ -14,49 +14,52 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./service-detail.component.css']
 })
 export class ServiceDetailComponent implements OnInit {
-  service: Service | undefined = undefined;
-  selectedPrice: 'online' | 'presencial' = 'online';
+
+  service = signal<Service | null>(null);
+  selectedPrice = signal<'online' | 'presencial'>('online');
+
+  price = computed(() => {
+    const serviceValue = this.service();
+    if (!serviceValue) return '';
+    return this.selectedPrice() === 'online' ? serviceValue.priceOnline : serviceValue.pricePresencial;
+  });
+
+  description = computed(() => {
+    if (!this.service()) return '';
+    return this.selectedPrice() === 'online' ? this.service()?.onlineDescription! : this.service()?.presencialDescription!;
+  })
 
   constructor(private route: ActivatedRoute, private router: Router, private title: Title) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const servicePath = params['path'];
-      this.service = services.find(service => service.path === servicePath);
-      if (this.service) {
-        this.initializePrice();
-        this.title.setTitle(this.service.title);
-      }
-      else {
-        this.router.navigate(['/services']); // Redirige a la página de error
+      const foundService = services.find(service => service.path === servicePath);
+
+      if (foundService) {
+        this.service.set(foundService);
+        this.selectedPrice.set('online');
+        this.title.setTitle(foundService.title);
+      } else {
+        this.router.navigate(['/services']);
       }
     });
   }
 
   initializePrice(): void {
-    if (!this.service?.priceOnline || this.service?.pricePresencial) {
-      this.selectedPrice = 'presencial';
-    } else if (!this.service?.pricePresencial) {
-      this.selectedPrice = 'online';
+    if (!this.service()?.priceOnline || this.service()?.pricePresencial) {
+      this.selectedPrice.set('presencial');
+    } else if (!this.service()?.pricePresencial) {
+      this.selectedPrice.set('online');
     }
   }
 
-  getPrice(): string {
-    if (!this.service) return '';
-    return this.selectedPrice === 'online' ? this.service?.priceOnline : this.service?.pricePresencial;
-  }
-
-  getDescription(): string {
-    if (!this.service) return '';
-    return this.selectedPrice === 'online' ? this.service?.onlineDescription : this.service?.presencialDescription;
-  }
-
   hasMultipleModalities(): boolean {
-    return !!(this.service?.priceOnline && this.service?.pricePresencial);
+    return !!(this.service()?.priceOnline && this.service()?.pricePresencial);
   }
 
   hasAnyDescription(): boolean {
-    return !!(this.service?.onlineDescription || this.service?.presencialDescription);
+    return !!(this.service()?.onlineDescription || this.service()?.presencialDescription);
   }
 
   onPriceChange(): void {
@@ -65,5 +68,10 @@ export class ServiceDetailComponent implements OnInit {
 
   navigateToAllServices(): void {
     this.router.navigate(['/services']);
+  }
+
+  encodeWhatsAppMessage(servicio: string): string {
+    const texto = "¡Hola! Quisiera agendar una cita para el servicio de " + servicio;
+    return encodeURIComponent(texto);
   }
 }

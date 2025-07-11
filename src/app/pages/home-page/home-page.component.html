@@ -11,7 +11,7 @@
     <!-- Cards centradas -->
     <section class="container">
         <div class="row justify-content-center">
-            <div class="col-md-3 mb-4 service-card" *ngFor="let service of principalServices"
+            <div class="col-md-3 mb-4 service-card" *ngFor="let service of services"
                 (click)="navigateToService(service.path)">
                 <div class="card">
                     <img [src]="service.image" class="card-img" [alt]="service.title">
@@ -28,23 +28,32 @@
         </div>
     </section>
 
-    <!-- Testimonios -->
+    <!-- Testimonios estilo carrusel -->
     <section class="container py-5">
-        <h2 class="text-center py-3">Testimonios</h2>
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button *ngFor="let review of reviews; let i = index" type="button"
-                    [attr.data-bs-target]="'#testimonialCarousel'" [attr.data-bs-slide-to]="i" [class.active]="i === 0"
-                    [attr.aria-current]="i === 0 ? 'true' : null" [attr.aria-label]="'Slide ' + (i + 1)"></button>
-            </div>
-            <div class="carousel-inner">
-                <div *ngFor="let review of reviews; let i = index" class="carousel-item" [class.active]="i === 0">
-                    <div class="testimonial">
-                        <p>{{ review.content }}</p>
-                        <p class="text-end">- {{ review.author }}, {{ review.age }}</p>
+        <h2 class="text-center py-3 title-font">Testimonios</h2>
+
+        <div class="review-carousel">
+            <div *ngFor="let review of visibleReviews; let i = index" class="mx-2" [ngClass]="{
+        'main-review': i === 1,
+        'side-review': i !== 1
+      }">
+                <div class="review-card shadow-sm">
+                    <p>“{{ review.content }}”</p>
+                    <p class="text-end fw-semibold mb-2">- {{ review.author }}
+                    <div class="stars">
+                        <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let j = index">
+                            <i class="fas" [ngClass]="j < review.stars ? 'fa-star' : 'fa-star-o'"></i>
+                        </ng-container>
                     </div>
                 </div>
             </div>
+
+            <button class="position-absolute top-50 start-0 translate-middle-y no-bg" (click)="prevSlide()">
+                <i class="fas fa-chevron-left fa-2x text-light"></i>
+            </button>
+            <button class="position-absolute top-50 end-0 translate-middle-y no-bg" (click)="nextSlide()">
+                <i class="fas fa-chevron-right fa-2x text-light"></i>
+            </button>
         </div>
     </section>
 </div>

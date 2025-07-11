@@ -1,0 +1,30 @@
+.ebook-slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.ebook-slider::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 4px;
+}
+
+.ebook-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.ebook-slider {
+    animation: scrollSlider 20s linear infinite;
+    display: flex;
+    will-change: transform;
+}
+
+@keyframes scrollSlider {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-170%);
+    }
+}
